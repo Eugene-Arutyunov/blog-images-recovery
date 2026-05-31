@@ -221,31 +221,31 @@
 | URL | Файл в репозитории |
 |-----|-------------------|
 | `https://intuition.news/images/principles/principle-img1.svg` | `external-images/vospriyatie/principle-img1.svg` |
-| `http://bvz.name/img/principles/gestalt1-1.svg` | — |
-| `http://bvz.name/img/principles/gestalt1-2.svg` | — |
-| `http://bvz.name/img/principles/gestalt1-3.svg` | — |
-| `http://bvz.name/img/principles/gestalt1-4.svg` | — |
-| `http://bvz.name/img/principles/gestalt1-4-2.svg` | — |
-| `http://bvz.name/img/principles/gestalt1-5.svg` | — |
-| `http://bvz.name/img/principles/gestalt1-6.svg` | — |
-| `http://bvz.name/img/principles/gestalt1-7.svg` | — |
-| `http://bvz.name/img/principles/gestalt1-8.svg` | — |
-| `http://bvz.name/img/principles/gestalt1-9.svg` | — |
-| `http://bvz.name/img/principles/gestalt1-10.svg` | — |
-| `http://bvz.name/img/principles/gestalt1-11.svg` | — |
-| `http://bvz.name/img/principles/gestalt1-12.svg` | — |
-| `http://bvz.name/img/principles/gestalt2-1.svg` | — |
-| `http://bvz.name/img/principles/gestalt2-2.svg` | — |
-| `http://bvz.name/img/principles/gestalt2-3.svg` | — |
-| `http://bvz.name/img/principles/gestalt2-4.svg` | — |
-| `http://bvz.name/img/principles/gestalt3-1.svg` | — |
-| `http://bvz.name/img/principles/gestalt3-4.svg` | — |
-| `http://bvz.name/img/principles/gestalt3-5.svg` | — |
-| `http://bvz.name/img/principles/gestalt4-1.svg` | — |
-| `http://bvz.name/img/principles/gestalt4-2.svg` | — |
-| `http://bvz.name/img/principles/gestalt5-1.svg` | — |
-| `http://bvz.name/img/principles/gestalt5-2.svg` | — |
-| `http://bvz.name/img/principles/gestalt5-3.svg` | — |
+| `http://bvz.name/img/principles/gestalt1-1.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt1-2.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt1-3.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt1-4.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt1-4-2.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt1-6.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt1-5.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt1-7.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt1-8.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt1-9.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt1-10.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt1-11.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt1-12.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt2-1.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt2-2.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt2-3.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt2-4.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt3-1.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt3-4.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt3-5.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt4-1.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt4-2.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt5-1.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt5-2.svg` | `—` |
+| `http://bvz.name/img/principles/gestalt5-3.svg` | `—` |
 
 ### lyuboy-tekstovy-shrift-podoydyot
 

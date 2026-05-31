@@ -6,7 +6,9 @@ from __future__ import annotations
 import json
 import re
 import ssl
+import subprocess
 import sys
+import tempfile
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -62,9 +64,42 @@ def try_download(url: str) -> tuple[bool, bytes | None, str]:
     candidates = [
         url,
         url.replace("http://", "https://", 1),
+        url.replace("http://bvz.name", "http://www.bvz.name"),
+        url.replace("http://bvz.name", "https://www.bvz.name"),
     ]
     last_err = ""
     for candidate in dict.fromkeys(candidates):
+        try:
+            with tempfile.NamedTemporaryFile(delete=False) as tmp:
+                tmp_path = tmp.name
+            r = subprocess.run(
+                [
+                    "curl",
+                    "-fsSL",
+                    "-A",
+                    "Mozilla/5.0",
+                    "-m",
+                    "30",
+                    "-o",
+                    tmp_path,
+                    "-w",
+                    "%{http_code}",
+                    candidate,
+                ],
+                capture_output=True,
+                text=True,
+                timeout=35,
+                check=False,
+            )
+            code = (r.stdout or "").strip()
+            if code == "200":
+                data = Path(tmp_path).read_bytes()
+                Path(tmp_path).unlink(missing_ok=True)
+                if len(data) > 20:
+                    return True, data, candidate
+            Path(tmp_path).unlink(missing_ok=True)
+        except Exception as exc:  # noqa: BLE001
+            last_err = str(exc)
         req = urllib.request.Request(candidate, headers={"User-Agent": "Mozilla/5.0"})
         try:
             with urllib.request.urlopen(req, timeout=25, context=CTX) as resp:
@@ -80,14 +115,15 @@ def analyze_post(post_url: str, mirror: bool = True) -> dict:
     slug = post_slug(post_url)
     images = external_images(post_url, html)
     entries: list[dict] = []
-    for img_url in images:
+    for i, img_url in enumerate(images):
         row: dict = {"url": img_url, "mirrored": None, "mirror_error": None}
         if mirror:
             ok, data, detail = try_download(img_url)
             if ok and data is not None:
                 dest_dir = ASSETS_DIR / slug
                 dest_dir.mkdir(parents=True, exist_ok=True)
-                dest = dest_dir / local_name_for_url(detail)
+                name = local_name_for_url(detail)
+                dest = dest_dir / (f"{i:02d}_{name}" if i else name)
                 dest.write_bytes(data)
                 row["mirrored"] = str(dest.relative_to(REPO_ROOT))
             else:
